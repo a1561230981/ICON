@@ -252,7 +252,7 @@ if __name__ == "__main__":
 
     with Pool(processes=mp.cpu_count(), maxtasksperchild=1) as pool:
         for _ in tqdm(
-            pool.imap_unordered(
+            map(
                 partial(
                     render_subject,
                     dataset=args.dataset,
@@ -268,7 +268,7 @@ if __name__ == "__main__":
         ):
             pass
 
-    pool.close()
-    pool.join()
+    #pool.close()
+    #pool.join()
 
     print('Finish Rendering.')
