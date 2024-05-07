@@ -268,7 +268,7 @@ if __name__ == "__main__":
         ):
             pass
 
-    pool.close()
-    pool.join()
+    #pool.close()
+    #pool.join()
 
     print('Finish Rendering.')
